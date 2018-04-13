@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_teaching"
+            android:icon="@drawable/teaching"
+            android:title="@string/title_teaching" />
+        <item
+            android:id="@+id/navigation_writing"
+            android:icon="@drawable/writing"
+            android:title="@string/title_writing" />
+        <item
+            android:id="@+id/navigation_data"
+            android:icon="@drawable/data"
+            android:title="@string/title_data" />
+        <item
+            android:id="@+id/navigation_tools"
+            android:icon="@drawable/tools"
+            android:title="@string/title_tools" />
+        <item
+            android:id="@+id/navigation_others"
+            android:icon="@drawable/others"
+            android:title="@string/title_others" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
