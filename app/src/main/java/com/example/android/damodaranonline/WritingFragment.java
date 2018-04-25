@@ -12,16 +12,15 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-public class TeachingFragment extends Fragment {
-
+public class WritingFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_teaching, container, false);
+        View v = inflater.inflate(R.layout.fragment_writing, container, false);
 
         /*List 1*/
-        String[] lv1 = {"Undergraduate: Corporate Finance", "Undergraduate: Valuation", "MBA: Corporate Finance", "MBA: Valuation"};
+        String[] lv1 = {"Visit the Blog"};
         ListView listView1 = v.findViewById(R.id.listview1);
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -33,7 +32,7 @@ public class TeachingFragment extends Fragment {
         listView1.setAdapter(arrayAdapter1);
 
         /*List 2*/
-        String[] lv2 = {"Corporate Finance: 2-3 days", "Valuation: 2-3 days"};
+        String[] lv2 = {"List of Books"};
         ListView listView2 = v.findViewById(R.id.listview2);
         listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -45,7 +44,7 @@ public class TeachingFragment extends Fragment {
         listView2.setAdapter(arrayAdapter2);
 
         /*List 3*/
-        String[] lv3 = {"Corporate Finance", "Valuation", "MBA: Corporate Finance", "Investment Philosophy"};
+        String[] lv3 = {"Read and Download the Papers"};
         ListView listView3 = v.findViewById(R.id.listview3);
         listView3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -57,7 +56,7 @@ public class TeachingFragment extends Fragment {
         listView3.setAdapter(arrayAdapter3);
 
         /*List 4*/
-        String[] lv4 = {"Archived Seminars", "Upcoming Seminars"};
+        String[] lv4 = {"Read the Articles"};
         ListView listView4 = v.findViewById(R.id.listview4);
         listView4.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

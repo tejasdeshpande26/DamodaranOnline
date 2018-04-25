@@ -16,8 +16,6 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
-    /*BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
-    BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new TeachingFragment();
                     break;
                 case R.id.navigation_writing:
-                    selectedFragment = new TeachingFragment();
+                    selectedFragment = new WritingFragment();
                     break;
                 case R.id.navigation_data:
                     selectedFragment = new TeachingFragment();
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity
                     selectedFragment = new TeachingFragment();
                     break;
                 case R.id.navigation_others:
-                    selectedFragment = new TeachingFragment();
+                    selectedFragment = new OthersFragment();
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
