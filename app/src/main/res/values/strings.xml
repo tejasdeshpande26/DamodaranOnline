@@ -2,7 +2,7 @@
     <string name="app_name">Damodaran Online</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">Damodaran Online</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -12,6 +12,7 @@
     <string name="title_tools">Tools</string>
     <string name="title_writing">Writing</string>
     <string name="title_others">Others</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Teaching Fragment</string>
@@ -33,4 +34,9 @@
     <string name="papers_desc">This wil get me sunned in the academic world, but who cares? I don\'t do academic reasearch or write to be published any more. Life is too short to be spent writing for an echo chamber and rewriting to meet the often arbitrary demands of a reviewer. I write only on topics (a) that interest me and (b) may be useful to practioners and you will find them at the link, through not always organized well</string>
     <string name="opinion_press">Opinion in Press</string>
     <string name="press_desc">I do sometimes write for the financial press and this link has a selected list of the articles that I have written in the last few years.</string>
+    <string name="read_desc_1">My name is Aswath Damodaran. I am a Professor of Finance at the Stern School of Business at New York University. I teach the corporate finance and valuation courses in the MBA program as well as occasional short-term classes around the world on both topics. I received my MBA and Ph.D degrees from the University of California at Los Angeles. My research interests lie in valuation, portfolio management and applied corporate finance. My papers have been published in the Journal of Financial and Quantative Analysis, the Journal of Finance, the Journal of Financial Economics and the Review of Financial Studios, though I am sure that the list of people who have read these articles is a short one.</string>
+    <string name="read_desc_2">I do like to write. I have written four books on equity valuation (Damodaran on Valuation, Investment Valuation, Investment Valuation, The Dark Side of Valuation, The Little Book of Valuation) and two on corporate finance (Corporate Finance: Theory and Practicce, Applied Corporate Finance: A User\'s Manual). I also co-edited a book on investment management</string>
+    <string name="about">About Damodaran</string>
+    <string name="teaching_philosophy">Teaching Philosophy</string>
+    <string name="primer">Primer on Background Topics</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.android.damodaranonline;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -21,11 +23,15 @@ public class OthersFragment extends Fragment {
 
         /*List 1*/
         String[] lv1 = {"Read the Bio"};
-        ListView listView1 = v.findViewById(R.id.listview1);
+        final ListView listView1 = v.findViewById(R.id.listview1);
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getActivity(), "This is my Toast message!", Toast.LENGTH_LONG).show();
+                Fragment newFragment = null;
+                if (listView1.getItemAtPosition(i).toString().equals("Read the Bio")) {
+                    newFragment = new readBio();
+                }
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, newFragment).addToBackStack(null).commit();
             }
         });
         ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<>(getActivity(), R.layout.list_row, lv1);
@@ -45,15 +51,31 @@ public class OthersFragment extends Fragment {
 
         /*List 3*/
         String[] lv3 = {"Accounting", "Statistics", "Present Value", "Statistical Distribution", "Risk Aversion"};
-        ListView listView3 = v.findViewById(R.id.listview3);
+        final ListView listView3 = v.findViewById(R.id.listview3);
+        ArrayAdapter<String> arrayAdapter3 = new ArrayAdapter<>(getActivity(), R.layout.list_row, lv3);
+        listView3.setAdapter(arrayAdapter3);
         listView3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getActivity(), "This is my Toast message!", Toast.LENGTH_LONG).show();
+                Fragment newFragment = null;
+                if (listView3.getItemAtPosition(i).toString().equals("Accounting")) {
+                    newFragment = new primerAccounting();
+                }
+                if (listView3.getItemAtPosition(i).toString().equals("Statistics")) {
+                    newFragment = new primerStatistics();
+                }
+                if (listView3.getItemAtPosition(i).toString().equals("Present Value")) {
+                    newFragment = new primerPresentValue();
+                }
+                if (listView3.getItemAtPosition(i).toString().equals("Statistical Distribution")) {
+                    newFragment = new primerStatisticalDistribution();
+                }
+                if (listView3.getItemAtPosition(i).toString().equals("Risk Aversion")) {
+                    newFragment = new primerRiskAversion();
+                }
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, newFragment).addToBackStack(null).commit();
             }
         });
-        ArrayAdapter<String> arrayAdapter3 = new ArrayAdapter<>(getActivity(), R.layout.list_row, lv3);
-        listView3.setAdapter(arrayAdapter3);
 
         /*List 4*/
         String[] lv4 = {"Financial Terms", "Financial Ratios & Measures"};
@@ -73,7 +95,9 @@ public class OthersFragment extends Fragment {
         listView5.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getActivity(), "This is my Toast message!", Toast.LENGTH_LONG).show();
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "adamodar@stern.nyu.edu"));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email Damodaran");
+                startActivity(Intent.createChooser(emailIntent, "Choose You Client"));
             }
         });
         ArrayAdapter<String> arrayAdapter5 = new ArrayAdapter<>(getActivity(), R.layout.list_row, lv5);
@@ -85,7 +109,10 @@ public class OthersFragment extends Fragment {
         listView6.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getActivity(), "This is my Toast message!", Toast.LENGTH_LONG).show();
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "t.deshpande001@umb.edu; swapnil.patil001@umb.edu"));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Android Bug");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, \n Description of Bug:  \n\n Sorry about that!");
+                startActivity(Intent.createChooser(emailIntent, "Choose You Client"));
             }
         });
         ArrayAdapter<String> arrayAdapter6 = new ArrayAdapter<>(getActivity(), R.layout.list_row, lv6);
